@@ -1,0 +1,142 @@
+/**
+CSS criado para a realizacao do Test de frontend
+*/
+* , *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+:root {
+    --branco: white;
+    --cinza: #c3c1c1;
+    --preto: black;
+    --rosa: pink;
+    --verde: #1eb81e;
+    --verde-claro: #9cff9c;
+    --verde-escuro: #157c15;
+    --verde-mais-escuro: #093509; 
+    --vermelho: rgb(243, 56, 56);
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.App{
+    display: flex;
+    justify-content: space-evenly;
+    width: fit-content;
+}
+
+.App .produto_container{
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+    width: fit-content;
+}
+
+.App .produto_imagem_container{
+    display: flex;
+    position: relative;
+}
+
+.App .produto_imagem_arquivo{
+    width: 100%;
+    height: auto;
+    max-width: 10rem;
+}
+
+.App .produto_imagem_iconeFavorito{
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    background: var(--cinza);
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.App .produto_imagem_iconeFavorito.produto_imagem_iconeFavorito__hover{
+    background-color: var(--rosa);
+    color: var(--vermelho);
+}
+
+.App .produto_imagem_iconeFavorito.produto_imagem_iconeFavorito__selecionado{
+    background-color: var(--vermelho);
+    color: var(--branco);
+}
+
+.App .produto_descricoes{
+    font-size: 0.8rem;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.App .produto_precoNormal{
+    text-decoration: line-through;
+    color: var(--cinza);
+    letter-spacing: 0.1rem;
+    font-size: 0.755rem;
+    line-height: 2;
+    margin-top: 1rem;
+}
+
+.App .produto_precoPromocional{
+    color: var(--vermelho);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.App .produto_formaPagamento{
+    font-size: 0.8rem;
+    color: var(--cinza);
+}
+
+.App .produto_formaPagamento__bold{
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--preto);
+}
+
+.App .produto_botaoAdicionar{
+    background-color: var(--verde);
+    color: white;
+    text-align: center;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.7rem;
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App .produto_botaoAdicionar_icone{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.App .produto_botaoAdicionar_icone.produto_botaoAdicionar_icone__invisivel{
+    display: none;
+}
+
+.App .produto_botaoAdicionar.produto_botaoAdicionar__hover{
+    background-color: var(--verde-escuro);
+}
+
+.App .produto_botaoAdicionar.produto_botaoAdicionar__acionado{
+    background-color: var(--verde-claro);
+    color: var(--verde-mais-escuro);
+}
