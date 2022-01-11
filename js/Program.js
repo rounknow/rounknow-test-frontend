@@ -93,6 +93,7 @@ class Program {
             });
 
             Program.adicionaProdutoParaDOM(p);
+            Program.produtos.push(p);
         });
 
     }
