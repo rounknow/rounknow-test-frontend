@@ -175,6 +175,9 @@ class Produto {
             this._container.appendChild(this._compBotaoAdicionar.getContainer());
         }
         
+        this.getCompBotaoAdicionar().addClick(() => {
+           
+        });
     }
 
     
